@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Christopher Konopka — Work CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+         :root {
+            --navy: #152D54;
+            --teal: #0C7787;
+            --ember: #DA6124;
+            --ink: #1A1E24;
+            --dark: #2E3338;
+            --muted: #585D63;
+            --light: #D0D5DA;
+            --tag-bg: #EDF2F5;
+            --tag-fg: #152D54;
+            --tag-bord: #BFCDD8;
+        }
+        
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            color: var(--ink);
+            background: #e8eaed;
+            padding: 24px;
+        }
+        /* Save button */
+        
+        .save-bar {
+            max-width: 210mm;
+            margin: 0 auto 14px;
+            text-align: right;
+        }
+        
+        .save-btn {
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            padding: 9px 22px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .save-btn:hover {
+            background: var(--teal);
+        }
+        /* Page */
+        
+        .page {
+            background: #fff;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 36px 40px 48px 40px;
+            box-shadow: 0 4px 32px rgba(0, 0, 0, .18);
+        }
+        /* ── Header ── */
+        
+        .hdr-left {
+            float: left;
+        }
+        
+        .hdr-right {
+            float: right;
+            text-align: right;
+        }
+        
+        .hdr-clear {
+            clear: both;
+        }
+        
+        .name {
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -.01em;
+        }
+        
+        .name .first {
+            color: var(--navy);
+        }
+        
+        .name .last {
+            color: var(--teal);
+        }
+        
+        .hdr-right a {
+            display: block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 8px;
+            color: var(--dark);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+        
+        .tagline {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            color: var(--dark);
+            letter-spacing: .08em;
+            margin: 5px 0 9px;
+        }
+        
+        .hdr-rule {
+            margin-bottom: 12px;
+        }
+        
+        .rule-ember {
+            display: inline-block;
+            height: 2px;
+            width: 190px;
+            background: var(--ember);
+            vertical-align: middle;
+        }
+        
+        .rule-light {
+            display: inline-block;
+            height: 1px;
+            background: var(--light);
+            vertical-align: middle;
+            width: calc(100% - 196px);
+        }
+        /* Section label */
+        
+        .section-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--teal);
+            border-bottom: .5px solid var(--light);
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+        /* ── Entry: FLOAT layout — most reliable for print ── */
+        
+        .entry {
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+        
+        .entry-left {
+            float: left;
+            width: 110px;
+            padding-right: 12px;
+        }
+        
+        .entry-right {
+            margin-left: 122px;
+            /* left width + padding */
+        }
+        /* Dot + company */
+        
+        .dot-wrap {
+            display: block;
+            overflow: hidden;
+        }
+        
+        .dot {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 4px solid var(--ember);
+            margin-top: 2px;
+            margin-right: 5px;
+        }
+        
+        .company {
+            float: left;
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+        
+        .dot-clear {
+            clear: both;
+        }
+        
+        .date {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 8px;
+            color: var(--muted);
+            margin-top: 3px;
+            padding-left: 13px;
+        }
+        /* Right col */
+        
+        .role {
+            font-weight: 600;
+            font-size: 10.5px;
+            color: var(--navy);
+            line-height: 1.25;
+            margin-bottom: 7px;
+        }
+        
+        .topics {
+            margin-bottom: 7px;
+        }
+        
+        .topic-pill {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 8px;
+            color: var(--tag-fg);
+            background: var(--tag-bg);
+            border: .75px solid var(--tag-bord);
+            padding: 2.5px 6px;
+            border-radius: 3px;
+            margin: 0 3px 3px 0;
+            white-space: nowrap;
+        }
+        
+        .skills {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 8px;
+            color: var(--dark);
+            line-height: 1.7;
+            margin-bottom: 7px;
+        }
+        
+        .skills .sep {
+            color: var(--light);
+            margin: 0 2px;
+        }
+        /* Bullets — NO position:absolute, NO pseudo-elements.
+   Inline dot span is 100% print-safe. */
+        
+        .bullets {
+            list-style: none;
+        }
+        
+        .bullets li {
+            font-size: 10px;
+            color: var(--ink);
+            line-height: 1.55;
+            font-weight: 300;
+            margin-bottom: 4px;
+            /* indent so text wraps past the dot */
+            padding-left: 12px;
+            text-indent: -12px;
+            color: #000;
+        }
+        
+        .bdot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            border: 2.5px solid var(--ember);
+            margin-right: 6px;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+        /* Separator */
+        
+        .sep-line {
+            clear: both;
+            border: none;
+            border-top: .5px solid var(--light);
+            margin: 10px 0;
+        }
+        /* ── PRINT ── */
+        
+        @page {
+            size: A4;
+            margin: 18mm 16mm;
+        }
+        
+        @media print {
+            html,
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .save-bar {
+                display: none !important;
+            }
+            .page {
+                width: 100% !important;
+                min-height: unset !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+            }
+            .topic-pill {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .rule-ember {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .bdot {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            /* Keep each entry together */
+            .entry {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="save-bar">
+        <button class="save-btn" onclick="window.print()">⬇ Save as PDF</button>
+    </div>
+
+    <div class="page">
+
+        <!-- Header -->
+        <div class="hdr-left">
+            <div class="name"><span class="first">Christopher </span><span class="last">Konopka</span></div>
+        </div>
+        <div class="hdr-right">
+            <a href="https://cskonopka.com">cskonopka.com</a>
+            <a href="https://github.com/cskonopka">github.com/cskonopka</a>
+            <a href="https://github.com/schwwaaa">github.com/schwwaaa</a>
+            <a href="https://linkedin.com/in/christopherkonopka">linkedin.com/in/christopherkonopka</a>
+        </div>
+        <div class="hdr-clear"></div>
+        <div class="tagline">Hardware &nbsp;·&nbsp; Software &nbsp;·&nbsp; UX &nbsp;·&nbsp; IoT &nbsp;·&nbsp; R&amp;D</div>
+        <div class="hdr-rule"><span class="rule-ember"></span><span class="rule-light"></span></div>
+        <div class="section-label">Work Experience</div>
+
+        <!-- schwwaaa -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">schwwaaa</div>
+                </div>
+                <div class="date">09/2024 – Present</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Co-Founder / Principal Solutions Architect &amp; Researcher</div>
+                <div class="topics"><span class="topic-pill">AI R&amp;D</span><span class="topic-pill">Solutions Architect</span><span class="topic-pill">Data Engineering</span><span class="topic-pill">Video Processing</span><span class="topic-pill">Technical Documentation</span></div>
+                <div class="skills">AI <span class="sep">/</span> Claude <span class="sep">/</span> Python <span class="sep">/</span> Rust <span class="sep">/</span> Media Processing <span class="sep">/</span> Automation <span class="sep">/</span> OpenClaw <span class="sep">/</span>                    Blockchain <span class="sep">/</span> Linux</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Conduct ongoing R&amp;D across cloud and local LLMs, spanning data engineering, model integration, and custom hardware/software systems.</li>
+                    <li><span class="bdot"></span>Built video processing tools using FFmpeg and OBS integrations, alongside web automation platforms for content creators.</li>
+                    <li><span class="bdot"></span>Developed software for archiving physical media (e.g. VHS, DVD) for AI training pipelines using specialized hardware capture workflows.</li>
+                    <li><span class="bdot"></span>Archived software libraries and built decentralized WebGL solutions using the Bitcoin Ordinals protocol.</li>
+                    <li><span class="bdot"></span>Provide Solutions Architecture consulting for early-stage MVPs and rapid prototypes across hardware and software.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Motional Principal -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Motional</div>
+                </div>
+                <div class="date">04/2023 – 07/2024</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Principal UX Hardware/Software Engineer</div>
+                <div class="topics"><span class="topic-pill">Autonomous Vehicles</span><span class="topic-pill">Solutions Architect</span><span class="topic-pill">User Testing</span><span class="topic-pill">Cybersecurity</span><span class="topic-pill">Full Stack Application Design</span></div>
+                <div class="skills">Arduino <span class="sep">/</span> Raspberry Pi <span class="sep">/</span> Node.js <span class="sep">/</span> Javascript <span class="sep">/</span> Python <span class="sep">/</span> Cellular <span class="sep">/</span> AWS <span class="sep">/</span>                    Automation <span class="sep">/</span> Linux <span class="sep">/</span> IoT <span class="sep">/</span> DevOps</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Product technical advisor focused on cross-team communication between Engineering, Operations, and Product.</li>
+                    <li><span class="bdot"></span>Led a small team creating CES-quality user journey prototypes for VIP, C-Suite, and dignitary showcases.</li>
+                    <li><span class="bdot"></span>Built IoT prototypes for the Motional/Uber delivery collaboration for the Product team.</li>
+                    <li><span class="bdot"></span>Managed a VR team delivering User Journey development, HMI experiences, and patent-awarded robotics use cases.</li>
+                    <li><span class="bdot"></span>Served as Product team liaison for Cybersecurity, validating Product tests against updated protocols.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Motional Senior -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Motional</div>
+                </div>
+                <div class="date">04/2021 – 04/2023</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Senior UX Hardware/Software Engineer</div>
+                <div class="topics"><span class="topic-pill">Autonomous Vehicles</span><span class="topic-pill">Solutions Architect</span><span class="topic-pill">Procurement</span><span class="topic-pill">Full Stack Application Design</span></div>
+                <div class="skills">Arduino <span class="sep">/</span> Raspberry Pi <span class="sep">/</span> Node.js <span class="sep">/</span> Javascript <span class="sep">/</span> Python <span class="sep">/</span> Cellular <span class="sep">/</span> AWS <span class="sep">/</span>                    Automation <span class="sep">/</span> Linux <span class="sep">/</span> IoT <span class="sep">/</span> DevOps</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Led technical development, cross-team coordination, and material sourcing for Hyundai Ioniq 5 EV prototype vehicles.</li>
+                    <li><span class="bdot"></span>Created a modular software/hardware platform enabling Product teams to validate Engineering use cases in real-world settings.</li>
+                    <li><span class="bdot"></span>Hardware/software integration lead for UI/UX accessibility testing with Lyft, C-Suite, Hyundai, Kia, and various dignitaries.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Motional UX -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Motional</div>
+                </div>
+                <div class="date">04/2020 – 04/2021</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">UX Hardware/Software Engineer</div>
+                <div class="topics"><span class="topic-pill">Solutions Architect</span><span class="topic-pill">User Testing</span><span class="topic-pill">QA</span><span class="topic-pill">Full Stack Application Design</span></div>
+                <div class="skills">Arduino <span class="sep">/</span> Raspberry Pi <span class="sep">/</span> Node.js <span class="sep">/</span> Javascript <span class="sep">/</span> Python <span class="sep">/</span> Cellular <span class="sep">/</span> AWS <span class="sep">/</span>                    Automation <span class="sep">/</span> Linux <span class="sep">/</span> IoT <span class="sep">/</span> DevOps</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Created an IoT vehicle hardware/software sandbox for Product testing a ride-share network with Cloud and Engineering teams.</li>
+                    <li><span class="bdot"></span>Validated automotive and experimental hardware components against Design &amp; Research team use cases.</li>
+                    <li><span class="bdot"></span>Built a VR platform for validating User Journey experiences and informing internal HMI development in Engineering.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Twilio -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Twilio</div>
+                </div>
+                <div class="date">08/2018 – 07/2019</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Developer Evangelist</div>
+                <div class="topics"><span class="topic-pill">Cellular IoT</span><span class="topic-pill">Community Outreach</span><span class="topic-pill">Technical Documentation</span></div>
+                <div class="skills">Arduino <span class="sep">/</span> Raspberry Pi <span class="sep">/</span> Node.js <span class="sep">/</span> Go <span class="sep">/</span> Javascript <span class="sep">/</span> React <span class="sep">/</span> AWS <span class="sep">/</span>                    Azure <span class="sep">/</span> Linux <span class="sep">/</span> Git</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Inspired and equipped Twilio IoT developers through blog content, tutorials, and quick-start guides using cellular hardware.</li>
+                    <li><span class="bdot"></span>Sponsored hackathons, hosted IoT workshops, and participated in panels on the cellular IoT development process.</li>
+                    <li><span class="bdot"></span>Provided specialized IoT solutions for developers using the T-Mobile Narrowband kit and Twilio SIM.</li>
+                    <li><span class="bdot"></span>Designed the SIGNAL Smart Door — an interactive Narrowband product demo for Twilio SIGNAL 2018.</li>
+                    <li><span class="bdot"></span>Created the TwilioIoT GitHub repository for sharing IoT code and snippets internally and externally.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- yack.com -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">yack.com</div>
+                </div>
+                <div class="date">09/2017 – 06/2018</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Full Stack Developer</div>
+                <div class="topics"><span class="topic-pill">Web Chat</span><span class="topic-pill">SMS</span><span class="topic-pill">Cloud</span></div>
+                <div class="skills">Javascript <span class="sep">/</span> Node.js <span class="sep">/</span> Express <span class="sep">/</span> React <span class="sep">/</span> AWS EC2 <span class="sep">/</span> DynamoDB <span class="sep">/</span> WebSockets</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Designed and developed a text-based notification system for Emergency Services over web chat using Twilio.</li>
+                    <li><span class="bdot"></span>Built the back-end in Node.js and architected cloud infrastructure from scratch using AWS EC2, S3, and DynamoDB.</li>
+                    <li><span class="bdot"></span>Created an API for receiving SMS from clients and updating user accounts via WebSockets.</li>
+                    <li><span class="bdot"></span>Installed a prototype user base using Auth0, created profile templates, and added an admin log viewer for saved calls.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Multimedia Innovations -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Multimedia Innovations</div>
+                </div>
+                <div class="date">01/2017 – 08/2017</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Full Stack Developer</div>
+                <div class="topics"><span class="topic-pill">Text-to-Speech</span><span class="topic-pill">Automation</span><span class="topic-pill">Transcription</span></div>
+                <div class="skills">Javascript <span class="sep">/</span> Node.js <span class="sep">/</span> Express <span class="sep">/</span> IBM Watson <span class="sep">/</span> YouTube API</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Invented an automation method that takes a YouTube link and generates a searchable transcription, audio, and video webpage.</li>
+                    <li><span class="bdot"></span>Created features including keyword highlighting, quote/word save &amp; share, and keyword-based playback.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Semisphere -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">The Semisphere Group</div>
+                </div>
+                <div class="date">07/2016 – 01/2018</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Lead R&amp;D Hardware &amp; Software Developer</div>
+                <div class="topics"><span class="topic-pill">VR / AR</span><span class="topic-pill">HCI</span><span class="topic-pill">Neuroscience Research</span></div>
+                <div class="skills">Raspberry Pi <span class="sep">/</span> Python <span class="sep">/</span> Linux <span class="sep">/</span> MaxMSP <span class="sep">/</span> Jitter <span class="sep">/</span> Unreal Engine <span class="sep">/</span> Arduino <span class="sep">/</span>                    Android <span class="sep">/</span> Processing</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Designed hardware/software solutions for Rhode Island Space Grant Consortium and Brown University's Planetary Geology dept. under Seth Horowitz, PhD &amp; Peter H. Schultz, PhD.</li>
+                    <li><span class="bdot"></span>Developed Oream — a modular hardware/software anti-nausea solution to reduce the effects of vertigo.</li>
+                    <li><span class="bdot"></span>Built custom VR software for navigating real-time 3D geological models with joystick control for Brown University.</li>
+                    <li><span class="bdot"></span>Created custom prototyping software to test prosthetic hand gestures.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Engine Institute -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">The Engine Institute</div>
+                </div>
+                <div class="date">01/2016 – 05/2016</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Lead R&amp;D Hardware &amp; Software Developer</div>
+                <div class="topics"><span class="topic-pill">Brainwave Algorithms</span><span class="topic-pill">LED Sculpture</span><span class="topic-pill">HCI</span></div>
+                <div class="skills">MaxMSP <span class="sep">/</span> Jitter <span class="sep">/</span> MindWave <span class="sep">/</span> Emotiv <span class="sep">/</span> Arduino <span class="sep">/</span> Neurosky</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Developer of MindDraw — a real-time interactive brainwave visualizer driven by Meditation and Attention patterns via the NeuroSky MindWave.</li>
+                    <li><span class="bdot"></span>Created software to capture and filter user brainwave patterns for developing experience presets.</li>
+                    <li><span class="bdot"></span>Designed a physics engine for dynamic control based on live brainwave input.</li>
+                    <li><span class="bdot"></span>Architected Imagining Blue — an interactive LED sculpture controlled by a user's brainwaves.</li>
+                    <li><span class="bdot"></span>Invented a modular serial stack enabling 30+ simultaneous serial connections via Arduino.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Pickasound -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Pickasound</div>
+                </div>
+                <div class="date">09/2015 – 01/2017</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Lead R&amp;D / Web Audio Developer / Integration Specialist</div>
+                <div class="topics"><span class="topic-pill">DSP Architecture</span><span class="topic-pill">Web Audio API</span><span class="topic-pill">Automation</span></div>
+                <div class="skills">Javascript <span class="sep">/</span> React <span class="sep">/</span> Redux <span class="sep">/</span> Wavesurfer.js <span class="sep">/</span> Web Audio API <span class="sep">/</span> DSP.js <span class="sep">/</span> Csound <span class="sep">/</span>                    Node.js</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Designed the audio DSP architecture including a standardized effect chain, pitch-shifting, time-stretching, and multi-track recording.</li>
+                    <li><span class="bdot"></span>Created internal and UI/UX unit tests for audio DSP algorithms.</li>
+                    <li><span class="bdot"></span>Developed webpage templates and UI/UX designs.</li>
+                    <li><span class="bdot"></span>Researched and developed fast-rendering audio algorithms.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- DSP Concepts -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">DSP Concepts</div>
+                </div>
+                <div class="date">06/2015 – 08/2015</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Integration Specialist</div>
+                <div class="topics"><span class="topic-pill">Interconnectivity</span><span class="topic-pill">Rapid Prototyping</span><span class="topic-pill">Technical Documentation</span></div>
+                <div class="skills">Pure Data <span class="sep">/</span> AudioWeaver</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Documented legacy code from a previous Pure Data project.</li>
+                    <li><span class="bdot"></span>Developed hardware/software pathways for real-time control of AudioWeaver using Pure Data.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Dave Jones Design -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Dave Jones Design</div>
+                </div>
+                <div class="date">07/2015</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Hardware Beta Tester</div>
+                <div class="topics"><span class="topic-pill">Eurorack</span><span class="topic-pill">Bug Tracking</span></div>
+                <div class="skills">Hardware</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Documented hardware performance leading up to the release of the O'Tool+.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Neuropop -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Neuropop</div>
+                </div>
+                <div class="date">01/2015 – 05/2015</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Web &amp; Android Developer</div>
+                <div class="topics"><span class="topic-pill">Data Visualization</span><span class="topic-pill">Clinical Testing</span></div>
+                <div class="skills">Android <span class="sep">/</span> Data Visualization <span class="sep">/</span> Mobile Development</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Designed applications focused on auditory pain solutions for Android.</li>
+                    <li><span class="bdot"></span>Developed auditory patient surveys for clinical testing on Android.</li>
+                    <li><span class="bdot"></span>Maintained and built a web UI workflow for observing and saving patient data.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Qu-Bit -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Qu-Bit Electronix</div>
+                </div>
+                <div class="date">05/2014 – 11/2014</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Audio DSP Developer</div>
+                <div class="topics"><span class="topic-pill">Audio DSP</span><span class="topic-pill">Rapid Prototyping</span><span class="topic-pill">QA</span></div>
+                <div class="skills">Csound <span class="sep">/</span> Raspberry Pi</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Created embedded audio DSP algorithms for the Nebulae Eurorack module using Csound.</li>
+                    <li><span class="bdot"></span>Quality assurance and UX/UI testing.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Boulanger Labs -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Boulanger Labs</div>
+                </div>
+                <div class="date">2012 – 2014</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Solutions Architect / Integration Specialist</div>
+                <div class="topics"><span class="topic-pill">iPad Development</span><span class="topic-pill">HCI</span><span class="topic-pill">Software Architecture</span></div>
+                <div class="skills">Pure Data <span class="sep">/</span> Csound <span class="sep">/</span> OpenFrameworks <span class="sep">/</span> TouchOSC <span class="sep">/</span> Objective-C</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Solutions architect for the Leap Motion app Muse featuring BT — connected OpenGL/OpenFrameworks to Pure Data via OSC, routing gestures into Csound.</li>
+                    <li><span class="bdot"></span>Developed Auto Muse — an algorithmic play-along system using Fibonacci number theory.</li>
+                    <li><span class="bdot"></span>Prototyped audio DSP algorithms and served as UI integration specialist for csSpectral.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Berklee ReBoot -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Berklee College of Music</div>
+                </div>
+                <div class="date">06/2013 – 09/2013</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">ReBoot Tutor</div>
+                <div class="topics"><span class="topic-pill">Interactive Performance</span><span class="topic-pill">Mentorship</span></div>
+                <div class="skills">MaxMSP <span class="sep">/</span> SoftStep</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Assisted professors with interactive development for personal projects.</li>
+                    <li><span class="bdot"></span>Mentored faculty on design paradigms and creative problem-solving.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="sep-line">
+
+        <!-- Berklee AMT -->
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Berklee College of Music</div>
+                </div>
+                <div class="date">2010 – 2012</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Assistive Music Technology Developer</div>
+                <div class="topics"><span class="topic-pill">Music Technology</span><span class="topic-pill">Data Sonification</span><span class="topic-pill">HCI</span></div>
+                <div class="skills">MaxMSP <span class="sep">/</span> Arduino</div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Invented Optical Sonance — a real-time drawing and sonification machine using Lucas number-based audio to sonify light data as it was drawn.</li>
+                    <li><span class="bdot"></span>Invented wiiAirDrum for the Assistive Music Technology program for Blind and Visually Impaired Musicians at Berklee.</li>
+                    <li><span class="bdot"></span>Software and drawing machines featured at the 2012 President's Advisory Council Meeting hosted by Roger Brown.</li>
+                    <li><span class="bdot"></span>Invented a wireless glove system and interactive robotics project for Nona Hendryx called MIT-1.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div style="height:14px;clear:both;"></div>
+        <div class="section-label">Education</div>
+        <div class="entry">
+            <div class="entry-left">
+                <div class="dot-wrap" style="display:block">
+                    <div class="company">Berklee College of Music</div>
+                </div>
+                <div class="date">2008 – 2012</div>
+            </div>
+            <div class="entry-right">
+                <div class="role">Electronic Production &amp; Design / Jazz Composition</div>
+                <div class="topics"><span class="topic-pill">Computer Music</span><span class="topic-pill">Physical Computing</span><span class="topic-pill">Data Sonification</span><span class="topic-pill">Sound Design</span><span class="topic-pill">Jazz Composition</span></div>
+                <ul class="bullets">
+                    <li><span class="bdot"></span>Studied under Dr. Richard Boulanger creating software and hardware applications using Csound, MaxMSP, Pure Data & C.</li>
+                    <li><span class="bdot"></span>Studied under Tom Zicarelli of Ableton & Cycling74 creating autonomous architectures & creative problem-solving.</li>
+                    <li><span class="bdot"></span>Comissioned to create work for Nona Hendryx createing hardware/software systems for live performances.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
